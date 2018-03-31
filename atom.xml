@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiaodingfromnuaa.github.com/"/>
-  <updated>2018-03-31T03:31:11.951Z</updated>
+  <updated>2018-03-31T05:19:14.215Z</updated>
   <id>http://xiaodingfromnuaa.github.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的测试博客2</title>
+    <link href="http://xiaodingfromnuaa.github.com/2018/03/31/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A22/"/>
+    <id>http://xiaodingfromnuaa.github.com/2018/03/31/我的测试博客2/</id>
+    <published>2018-03-31T05:05:04.000Z</published>
+    <updated>2018-03-31T05:19:14.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>ceshiceshi </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ceshiceshi &lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Test" scheme="http://xiaodingfromnuaa.github.com/categories/Test/"/>
+    
+    
+      <category term="Hexo" scheme="http://xiaodingfromnuaa.github.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>我的测试博客</title>
