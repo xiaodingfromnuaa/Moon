@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiaodingfromnuaa.github.com/"/>
-  <updated>2018-03-29T13:01:56.448Z</updated>
+  <updated>2018-03-31T03:31:11.951Z</updated>
   <id>http://xiaodingfromnuaa.github.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的测试博客</title>
+    <link href="http://xiaodingfromnuaa.github.com/2018/03/31/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://xiaodingfromnuaa.github.com/2018/03/31/我的测试博客/</id>
+    <published>2018-03-31T03:27:55.000Z</published>
+    <updated>2018-03-31T03:31:11.951Z</updated>
+    
+    <content type="html"><![CDATA[<p id="div-border-left-blue">提示：本篇文章将介绍在使用 heox 做博客框架中的一些 bug 处理情况。</p><p>按照之前的教程介绍应该是会比较顺利的搭建好你的博客，但是难免会遇到一些意外，这个时候就要学会解决问题了。<br>解决问题的原则是：查看 bug 信息，从上到下依次解决 bug。</p><p>下面来看几个例子：</p><a id="more"></a><p>首先这个是在 <code>hexo clean</code> 时报的错：<br><img src="http://i1.piimg.com/567571/08a05e89a756ee75.png" alt=""><br>提示插件 <strong>hexo-deployer-git</strong> 加载失败，想了一下，应该是上次我在移动博客目录的时候，这个模块中有一些文件名比较长的文件，系统会提示移动不过来，导致这个模块异常，很简单，文件夹中删除这个模块，重新安装即可。（或者使用 <strong>npm</strong> 来卸载这个模块，然后重新安装）如下：</p><p><img src="http://i1.piimg.com/567571/a26efa972092fb9e.png" alt=""></p><p>OK ， 现在好了，<code>hexo clean</code> 没有报错了。</p><p><img src="http://i1.piimg.com/567571/24a28fcb40d1c95f.png" alt=""></p><p>下面，我是在执行 <code>hexo g</code> 的操作，同样也出现了错误：</p><p><img src="http://i1.piimg.com/567571/40a2d64a4aba2a04.png" alt=""></p><p>按照图中我标注的步骤，来看一下错误信息：<br>如 1 所示：我们首先会发现缺少模块 <strong>isarray</strong> ，但是我们查看 <strong>package.json</strong> 文件，我们的项目根本就没有引入 <strong>isarray</strong> 这个模块，我猜测这个 <strong>isarray</strong> 模块应该是某个模块的子模块 。</p><p>如 2 所示：我们顺着 <strong>at</strong> 一路往下找。</p><p>如 3 所示：发现这个 <strong>isarray</strong> 是在 <strong>hexo-generator-sitemap</strong> 里面的 ，所以我们删除这个 <strong>hexo-generator-sitemap</strong> 模块，然后重新安装这个模块。如下：</p><p><img src="http://i1.piimg.com/567571/6a740eb49f5ad0c2.png" alt=""></p><p>OK ， 现在好了，<code>hexo g</code> 没有报错了。</p><p><img src="http://i1.piimg.com/567571/91abd56ac0617023.png" alt=""></p><p>那么，就以这两个例子来作为本次的示范吧，其实，<strong>Hexo</strong> 中的一些问题还是比较好解决的，因为它都是依赖其他模块的，定位到出问题的模块，卸载重装即可。</p><p id="div-border-top-red">总结：遇到问题 <strong>bug</strong>，一定要仔细查阅错误提示信息，遵守从上往下解决的方案。</p><p></p><h5 style="color:#f63;"><i>最后要说的是：</i></h5><p></p><p id="div-border-top-green"><i><a href="https://github.com/Neveryu/Neveryu.github.io" target="_blank" rel="noopener">博客源码</a> ， 欢迎 star<br></i></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p id=&quot;div-border-left-blue&quot;&gt;提示：本篇文章将介绍在使用 heox 做博客框架中的一些 bug 处理情况。&lt;/p&gt;
+
+&lt;p&gt;按照之前的教程介绍应该是会比较顺利的搭建好你的博客，但是难免会遇到一些意外，这个时候就要学会解决问题了。&lt;br&gt;解决问题的原则是：查看 bug 信息，从上到下依次解决 bug。&lt;/p&gt;
+&lt;p&gt;下面来看几个例子：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://xiaodingfromnuaa.github.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://xiaodingfromnuaa.github.com/tags/Hexo/"/>
+    
+      <category term="Next" scheme="http://xiaodingfromnuaa.github.com/tags/Next/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
